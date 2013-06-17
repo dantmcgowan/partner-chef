@@ -18,11 +18,11 @@ Post vargrant up steps:
 
     $ cd /vagrant
 
-4.  create apache config from template
+4.  backup apache config
 
     $ cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.default
 
-5.  now add on application apache config
+5.  now add on application config to apache config
 
     $ cat httpd.conf.default >> /etc/apache2/apache2.conf
 
@@ -35,6 +35,8 @@ Post vargrant up steps:
     $ ln -s demo-dev demo
 
 7.  add databases and users
+
+    $ cd /vagrant
 
     $ mysql -u root -p mysql < setup.sql
 
@@ -49,4 +51,8 @@ Post vargrant up steps:
     $ apachectl configtest
 
     $ apachectl restart
+
+10.  browse the app via the host
+
+    $ http://localhost:2204/
 
