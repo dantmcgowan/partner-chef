@@ -1,0 +1,4 @@
+# all vagrant internal
+.vagrant/**/*
+# all idea internal
+.idea/**/*
