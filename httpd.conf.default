@@ -1,0 +1,23 @@
+#
+# Partner-Path additions (begin)
+#
+DocumentRoot "/var/www"
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    #
+    # Magic
+    #
+    AddType application/vnd.openxmlformats-officedocument.presentationml.presentation pptx
+    AddType video/mp4 mp4
+    AddType video/webm webm
+</Directory>
+NameVirtualHost *:80
+NameVirtualHost *:443
+#
+# demo app
+#
+Include /usr/local/demo/conf/httpd.conf
+#
+# Partner-Path additions (end)
+#
